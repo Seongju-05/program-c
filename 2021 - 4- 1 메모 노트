@@ -1,0 +1,100 @@
+1.
+
+AZ + ZA가 99가 되게 출력하시오.
+중복 숫자 허용
+
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	int A, Z, ans;
+	for (A = 0; A <10; A++)
+		for (Z = 0; Z < 10; Z++)
+		{
+			if (A == Z)// A와 Z는 다른 숫자이다.
+				continue;
+			ans = (A * 10 + Z) + (Z * 10 + A);
+			if ( ans == 99)
+				printf("%d %d + %d %d = %d\n",A, Z,Z,A,ans);
+		}
+	return 0;
+}
+
+
+2.
+
+1,2,3,4,5중 아무거나 눌렀을 때 누른 번호를
+나타내어 주는 프로그램을 만드시오
+break; 주석 처리 한것
+
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+int mian()
+{
+	int n;
+	printf("1~5사이의 값을 입력하세요 : ");
+	scanf ("%d", &n);
+	// switch case break default
+	switch (n)
+	{
+	case 1:// 콜론
+			printf("1입니다.");
+			//break;
+		case 2:
+			printf("2입니다.");
+			//break;
+		case 3:
+			printf("3입니다.");
+			//break;
+		case 4:
+			printf("4입니다.");
+			//break;
+		case 5:
+			printf("5입니다.");
+			//break;
+		default:
+			printf("그 외의 숫자입니다.");
+	}
+	return 0;
+}
+
+
+3.
+
+1,2,3,4,5중 아무거나 눌렀을 때 누른 번호를
+나타내어 주는 프로그램을 만드시오
+break; 주석 처리 안한것
+
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+int mian()
+{
+	int n;
+	printf("1~5사이의 값을 입력하세요 : ");
+	scanf("%d", &n);
+	// switch case break default
+	switch (n)
+	{
+	case 1:// 콜론
+		printf("1입니다.");
+		break;
+	case 2:
+		printf("2입니다.");
+		break;
+	case 3:
+		printf("3입니다.");
+		break;
+	case 4:
+		printf("4입니다.");
+		break;
+	case 5:
+		printf("5입니다.");
+		break;
+	default:
+		printf("그 외의 숫자입니다.");
+	}
+	return 0;
+}
