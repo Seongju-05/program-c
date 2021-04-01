@@ -44,20 +44,33 @@ int main()
 }
 
 3.
-//1~200까지 3의 배수이면서 5의 배수인 숫자를 출력하시오.(5개 마다 세줄에서 출력)
+//국어 , 수학, 프로그래밍 성적을 입력받아
+//평균을 내고, 그 평균점수가
+//100이하 90초과이면 'A'출력, 90점 이하 80점초과이면 'B'
+//70점이하이면 'F'를 출력하는 프로그램을 만드세요.
 #pragma warning (disable : 4996)
 #include <stdio.h>
+
 int main()
 {
-	int a, cnt = 1;
-	for (a = 1; a <= 200; a++)
-		if (a % 3  == 0 && a % 5 == 0) {
-			printf("%4d", a);
-			cnt++;
-			if (cnt == 5) {
-				printf("\n");
-				cnt = 0;
-			}
-		}
+	int x;
+	printf("점수 : ");
+	scanf("%d", &x);
+	if (x > 90 && x <= 100)
+	{
+		printf("A\n");
+	}
+	if (x > 80 && x <= 90)
+	{
+		printf("B\n");
+	}
+	if (x > 70 && x <= 80)
+	{
+		printf("C\n");
+	}
+	if (x > 0 && x <= 70)
+	{
+		printf("F\n");
+	}
 	return 0;
 }
