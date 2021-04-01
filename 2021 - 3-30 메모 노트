@@ -1,0 +1,100 @@
+1.
+80점 이상이면 축하합니다. 합격입니다 출력
+80점 미만이면 죄송합니다. 불합격입니다 출력
+
+#pragma warning (disable : 4996)
+#include <stdio.h>
+int mian()
+{
+	int a;
+	printf("점수를 입렵하세요 : ");
+	scanf("%d", &a);
+	if (a >= 80)
+	{
+		printf("축하합니다. 합격입니다.\n");
+	}
+	else
+	{
+		printf("죄송합니다. 불합격입니다.\n");
+	
+  }
+	return 0;
+}
+
+
+2.
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+    
+다이아몬드 별 만들기
+#pragma warning (disable : 4996)
+#include <stdio.h>
+int main()
+{
+    int a = 0, b = 0, c = 0;
+    for (int a = 0; a < 5; a++)
+    {
+        for (int b = 0; b < 4 - a; b++)
+        {
+            printf(" ");
+        }
+        for (int c = b; c < a * 2 + 1; c++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    for (int a = 4; a > 0; a--)
+    {
+        for (int b = 0; b < 5 - a; b++)
+        {
+            printf(" ");
+        }
+        for (int c = 0; c < a * 2 - 1; c++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+3.
+	짝수의 구구단만 아래처럼 출력하는 프로그램을 만드시오.
+	/*
+	2* 1 = 2
+	2* 2 = 4
+  ====================
+	4 * 1 = 4
+	4 * 2 = 8
+	4 * 3 = 12
+	4 * 4 = 16
+=====================
+	6 * 1 = 6
+	6 * 2 = 12
+	6 * 3 = 16
+  ===================
+	*/
+  
+ #pragma warning (disable : 4996)
+#include <stdio.h>
+int main()
+{
+	int a,b;
+	for (a = 2; a < 10 && a % 2 == 0; a += 2)
+	{
+		printf("=========================\n");
+		for (b = 1; b <= a; b++) {
+			printf("%d * %d = %d\n", a, b, a * b);
+		}
+	}
+	return 0
+	}
