@@ -1,0 +1,28 @@
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+ // do whil을 사용하여 1~n까지 합을 출력하는 프로그램
+ // 이때 0을 입력하면 종료
+ int n, sum = 0;
+ do
+ {
+  printf("0을 입력하면 종료: ");
+  scanf("%d", &n);
+  sum += n;
+ } while (n);// while (n);
+ printf("sum : %d\n", sum);
+ 
+ 
+ //while문을 사용하여
+ //2*1=2 2*2=4구구단 2단 출력하는 프로그램을 만드시오.
+ #pragma warning (disable : 4996)
+ #include <stdio.h>
+ int main ()
+ {
+ int n = 1;
+ while (n <= 20)
+ {
+ printf("5 * %d= %d\n",n, n * 5); 
+ n++;
+ return 0;
+ }
