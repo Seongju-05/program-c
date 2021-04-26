@@ -1,0 +1,26 @@
+/while문을 사용하여 1~10까지 출력하는 프로그램
+
+#pragma warning(disable:4996)
+#include <stdio.h>
+
+int main()
+{
+ int n = 0;
+ while (n++, n <= 10)
+ printf("%3d", n);
+ return 0;
+ }
+
+// 새로운 방법  do while
+#pragma warning(disable:4996)
+#include <stdio.h>
+int main()
+{
+ int n = 0;
+ do
+ {
+  printf("%3d", n);
+ } 
+ while (++n <= 10);
+ return 0;
+ }
