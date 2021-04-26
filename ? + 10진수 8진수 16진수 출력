@@ -1,0 +1,40 @@
+#pragma warning(disable:4996)
+#include <stdio.h>
+
+int main()
+{
+
+	double n1 = 1.23e-3;
+	printf("%e\n", n1); // 1.230000e - 03 자릿수를 연산값으로 보여주는 형태
+	printf("%f\n", n1); // 0.001230
+	printf("%g\n", n1); // 0.00123
+	double n2 = 1.2345678e-3;
+	printf("%e\n", n2); // 1.2345678e - 03
+	printf("%f\n", n2); // 0.001235
+	printf("%g\n", n2); // 0.001234567
+	double n3 = 1.234567823456e-3;
+	printf("%e\n", n3); // 1.2345678e - 03
+	printf("%f\n", n3); // 0.001235 기본 6자리
+	printf("%g\n", n3); // 0.001234567 %g쓰면 기본 7자리 까지
+	double n4 = 1.234567823456e-8;
+	printf("%e\n", n4); // 1.2345678e - 03
+	printf("%f\n", n4); // 0.000000
+	printf("%g\n", n4); // 1.23457e - 08
+	return 0;
+}
+
+
+ //문제 10진수(%d),8진수(%o),16(%x)진수로 입력받아 10진수로 출력하는 프로그램
+
+#pragma warning(disable:4996)
+#include <stdio.h>
+
+int main()
+{
+ int n1, n2, n3;
+ printf("10진수,8진수,16진수\n");
+ scanf("%d %o %x", &n1, &n2, &n3);
+ printf("--10진수로 출력--\n");
+ printf("%d %d %d\n", n1, n2, n3);
+ return 0;
+ }
