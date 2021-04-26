@@ -1,0 +1,38 @@
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main()
+{	
+	int n1;
+	int n2;
+	scanf("%d %d", &n1, &n2);
+	printf("n1과 n2의 비트 AND 연산 결과 : %d\n", answer);
+return 0;
+}
+
+
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main()
+{
+	int n1 = 15;
+	int n2 = 20;
+	scanf("%d %d", &n1, &n2);
+	int answer = n1 | n2;
+	printf("n1과 n2의 비트 OR 연산 결과 : %d\n", answer);
+return 0;
+}
+	
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main()
+{
+	int n1 = 15;
+	int n2 = 20;
+	scanf("%d %d", &n1, &n2);
+	int answer = n1 ^ n2;
+	printf("n1과 n2의 비트 XOR 연산 결과 : %d\n", answer);
+	return 0;
+  }
