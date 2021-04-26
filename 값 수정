@@ -1,0 +1,21 @@
+#pragma warning (disable : 4996)
+#include <stdio.h>
+// 초기 값을 입력후 수정을 하고자 하는 인덱스값을 입력받아
+// 수정하여 출력하는 프로그램을 작성하시오.
+int main()
+{
+	char a[30] = { 0 }, c;
+	int b;
+	printf("초기값 : ");
+	scanf("%s", a);
+	getchar();
+	printf("수정 희망 인덱스 : ");
+	scanf("%d", &b);
+	getchar();
+	printf("수정값 : ");
+	scanf("%c", &c);
+	getchar();
+	a[b - 1] = c;
+	printf("%s", a);
+	return 0;
+}
