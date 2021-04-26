@@ -1,0 +1,17 @@
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+
+// Enter을 누르면 Hello가 출력되게 하고 다른 키를 누르면 종료
+int main()
+{
+	char a;
+	while (1)
+	{
+		scanf("%c", &a);
+		if (a == 10)
+			printf("Hello\n	");
+		else
+			break;
+	}
+}
