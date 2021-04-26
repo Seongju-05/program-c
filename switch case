@@ -1,0 +1,21 @@
+//switch case 문
+
+//조건 : 조건식의 결과가 정수나 문자가 될 수 있는 조건 또는 변수
+//case n 값 조건의 결과가 값 n 일때 해당 명령을 실행(값 n 은 반드시 정수형 상수여야하며 변수는 올수 X)
+//break 문을 종료하는 명령
+//default case에 없는 그 외의 모든 경우에 실행되는 명령문
+
+#include <stdio.h>
+int main()
+{
+	int a;
+	scanf("%d", &a);
+	switch (a)
+{
+	case 1: printf("1st"); break;
+	case 2: printf("2st"); break;
+	case 3: printf("3st"); break;
+	default: printf("%dth", a); 
+	}
+  return 0;
+}
