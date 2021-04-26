@@ -1,0 +1,31 @@
+#pragma warning (disable : 4996 )
+#include <stdio.h>
+
+int main()
+{
+	int a, b;
+	int start = 0;
+	int end = 6;
+	for (a = 0; a < 7; a++)
+	{
+		for (b = 0; b < 7; b++)
+		{
+			if (start == b)
+			{
+				printf("*");
+			}
+			else if (end == b)
+			{
+				printf("*");
+			}
+			else
+			{
+				printf(" ");
+			}
+		}
+		start++;
+		end--;
+		printf("\n");
+	}
+	return 0;
+}
