@@ -1,0 +1,28 @@
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+  int main()
+{
+ //문자를 입력하면 10진수로 출력하기
+  char a;
+  printf("문자 입력 : ");
+  scanf("%c", &a);
+  scanf("%c", &a);
+  printf("10진수 숫자 : %d\n", a);
+  return 0;
+  }
+  
+#pragma warning (disable : 4996)
+#include <stdio.h>
+// 삼각형의 넓이 구하기2
+int main()
+{
+  int x1, y2, x3, y4;
+  printf("첫번째 가로 세로의 값을 입력 : ");
+  scanf("%d %d",&x1, &y2);
+  printf("두번째 가로 세로의 값을 입력 : ");
+  scanf("%d %d", &x3, &y4);
+  int result = abs( (x1 - x3) * (y2 - y4) );
+  printf("사각형의 넓이는 %d입니다.", result);
+  return 0;
+  }
