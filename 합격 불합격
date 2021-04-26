@@ -1,0 +1,17 @@
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+//국어,영어,수학 성적을 정수로 입력받아 평균을 구한 후
+//평균이 80점 이상이면 '합격'과 평균 점수를 정수형으로 출력하고,
+//80점 미만이라면'불합격!'과 80점까지 몇점이 부족한지 출력하시오
+int main()
+{
+	int k, e, m, avg;
+	scanf("%d %d %d", &k, &e, &m);
+	avg = (e + k + m) / 3;
+	if ( avg  >= 80)
+		printf("합격! 점수  :  %d",avg);
+	if (avg <= 80)
+		printf("불합격! 점수 : %d", 80 - avg);
+	return 0;
+}
