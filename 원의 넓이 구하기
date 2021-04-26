@@ -1,0 +1,12 @@
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+int main ()
+{
+  double r, area; // 넓이, 반지름
+  printf("반지름 값을 입력하세여");
+  scanf("%d", &r);
+  area = r * r * 3.14;
+  printf("반지름 %d의 원의 넓이 : %f\n", r, area);
+  return 0;
+}
