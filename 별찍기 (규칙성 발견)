@@ -1,0 +1,65 @@
+//사각형 별찍기(규칙성 발견)
+ //*****   *	    *****
+ //*****   **	    ****
+ //*****   ***    ***
+ //*****   ****	  **
+ //*****   *****	*
+ 
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+ int main ()
+ {
+ int a, b;
+ for (a = 1; a <= 5; a++)
+ {
+  for (b = 0; b < a; b++)
+  {
+  printf("*");
+  }
+  printf("\n");
+  return 0;
+ }
+ 
+ 
+ 
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main ()
+{
+ int a, b;
+ for (a = 5; a >= 1; a--)
+ {
+  for (b = 0; b < 5 - a; b++) {
+   putchar(32);
+  }
+  for (b = 0; b < a; b++)
+  {
+  printf("*");
+  }
+  printf("\n");
+  return 0;
+ }
+ 
+ 
+ 
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main ()
+{
+ int a, b;
+ for (a = 0; a < b; b++)
+ {
+  for (a = 5; b < 5; b++) {
+   putchar(32);
+  }
+  for (b = 0; b < 5 - a; b++)
+  {
+   printf("*");
+  }
+  printf("\n"); 
+ }
+  return 0;
+}
