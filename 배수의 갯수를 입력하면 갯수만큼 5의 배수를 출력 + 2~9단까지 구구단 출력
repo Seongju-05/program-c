@@ -1,0 +1,36 @@
+ 
+//배수의 갯수를 입력하면 갯수만큼 5의 배수를 출력하는 프로그램을 만드시오.
+#pragma warning(disable:4996)
+#include <stdio.h>
+
+int main ()
+ {
+ int n, i = 0;
+ scanf("%d", &n);
+ while (i++ < n)
+ {
+ printf("%5d", 5 * i);
+ return 0;
+ }
+ 
+ 
+ 
+ //2~9단까지 구구단 출력 코드 작성
+#pragma warning(disable:4996)
+#include <stdio.h>
+
+ int main ()
+ {
+ int n = 2, i = 0;
+ while (n < 10)
+ {
+  i= 1;
+  while (i < 10)
+  {
+   printf("%d*%d = %3d\n", n, i, n * i);
+   i++;
+  }
+  n++;
+ }
+ return 0;
+}
