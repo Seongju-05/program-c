@@ -1,0 +1,21 @@
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+//포인트란?
+//pointer
+//메모리 주소값을 저장하는 변수
+// & , * (발표)
+
+int main()
+{
+	int n1 = 100, n2 = 200;
+	int* p;
+	// p = n1
+	p = &n1;
+	printf("%p\n" , p);
+	printf("%d\n", *p);
+	printf("%d\n", n1);
+	(*p) = 300;
+	printf("%d\n", *p);
+	return 0;
+}
