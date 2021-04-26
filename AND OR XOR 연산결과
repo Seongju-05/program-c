@@ -1,6 +1,6 @@
+AND 연산 결과
 #include <stdio.h>
 #define _CRT_SECURE_NO_WARNINGS
-
 int main()
 {	
 	int n1;
@@ -11,6 +11,7 @@ return 0;
 }
 
 
+OR 연산 결과
 #include <stdio.h>
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -24,6 +25,7 @@ int main()
 return 0;
 }
 	
+XOR 연산 결과
 #include <stdio.h>
 #define _CRT_SECURE_NO_WARNINGS
 
