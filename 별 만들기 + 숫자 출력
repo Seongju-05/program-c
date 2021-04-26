@@ -1,0 +1,41 @@
+5번
+#pragma (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	int a, b, c;
+	printf("C 입력 : ");
+	scanf("%d", &n);
+	for (a = 0; a < c: a += 1)
+	{
+		for (b = 0; b < c; b += 1)
+		printf("*")
+	}
+	printf("\n");
+	return 0;
+}
+
+
+
+6번
+#pragma (disable : 4996)
+#include <stdio.h>
+int main() 
+{
+	int i, j;
+	for(i = 1; i <= 5; i++){
+		for (j = 1; j <= 5; j++) {
+			printf("%d ", i);
+		}
+		printf("\n");
+	}
+	printf("\n");
+	for (i = 1; i <= 5; i++) {
+		for (j = 1; j <= 5; j++) {
+			printf("%d ", j);
+		}
+		printf("\n");
+	}
+ return 0;
+}
