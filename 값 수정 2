@@ -1,0 +1,21 @@
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	char arr[30] = { 0 }, c;
+	int b;
+	printf("초기값 입력 :");
+	scanf("%s", arr);
+	while (1)
+	{
+		printf("수정 희망 인덱스 : ");
+		scanf("%d", &b);
+		getchar();
+		printf("수정값 : ");
+		scanf("%c", &c);
+		arr[b - 1] = c;
+		printf("%s\n", arr);
+	}
+	return 0;
+}
