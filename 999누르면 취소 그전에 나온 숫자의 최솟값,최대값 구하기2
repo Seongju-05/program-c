@@ -1,0 +1,25 @@
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+
+//세자리 이하의 정수100개를 차례로 입력 받다가 999가 입력되면 
+//프로그램을 종료하고 999를 제외한 그떄까지 입력된
+//최대값과 최소값을 출력하는 프로그램을 작성하시오.
+
+int main()
+{
+	int i = -1, n[100], sum1 = 0, sum2 = 0;
+	printf("입력 정수 :    ");
+	do
+	{
+		i++;
+		scanf("%d", &n[i]);
+		if (n[i] > sum1)
+		if (n[i] < 999)
+			sum1 = n[i];
+		if (n[i] < sum2)
+			sum2 = n[i];
+	} 	
+	while (i < 100 && n[i] != 999);
+	printf("max : %d\nmin : %d", sum1, sum2);
+}
