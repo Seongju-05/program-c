@@ -1,0 +1,12 @@
+
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+int main ()
+{
+	printf("김\n");
+	printf("성\n");
+	printf("주\n");
+	printf("김\n성\n주\n");
+return 0;
+}
