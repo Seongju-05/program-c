@@ -1,0 +1,16 @@
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main()
+{
+	
+	int n1 = 15;
+	int n2 = 20;
+	int answer = n1 & n2;
+	printf(" n1과 n2의 비트 AND 연산 결과 : %d\n", answer);
+	return 0;
+  }
+	// n1과 n2의 비트 AND 연산 결과 : 4
+	// 15 : 00000000 00000000 00000000 00001111
+	// 20 : 00000000 00000000 00000000 00010100
+	// 32bit
