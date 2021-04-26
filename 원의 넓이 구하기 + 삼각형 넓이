@@ -10,3 +10,17 @@ int main ()
   printf("반지름 %d의 원의 넓이 : %f\n", r, area);
   return 0;
 }
+
+
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+int main ()
+{
+  int x, y, area;
+  printf("가로 x와 y의 값을 입력하세여");
+  scanf("%d %d", &x, &y);
+  area = x * y / 2;
+  printf("삼각형의 넓이는 %d입니다.\n", area);
+  return 0;
+}
