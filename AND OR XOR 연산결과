@@ -38,3 +38,16 @@ int main()
 	printf("n1과 n2의 비트 XOR 연산 결과 : %d\n", answer);
 	return 0;
   }
+
+	NOT 연산 결과
+	#include <stdio.h>
+	#define _CRT_SECURE_NO_WARNINGS
+
+	int main()
+	{
+	int n1 = 1;
+	printf("%d\n", n1); // 1    1 => 00000001
+	n1 = ~n1; // 비트 NOT
+	printf("%d\n", n1); // -2  ~1 => 11111110
+	return 0;
+	}
