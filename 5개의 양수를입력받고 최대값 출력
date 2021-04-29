@@ -1,0 +1,26 @@
+//5개의 양수를 배열에 입력한 후, 입력받은 모든 수와
+//최대값을 출력하는 프로그램을 작성하시오.
+// [입력 결과]
+// 입력 : 1 2 3 4 5
+// [출력 결과]
+// 1 2 3 4 5
+// 최대값 : 5
+
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	int a[5];
+	int i, max = 0;
+	printf("양수를 입력하세요. : ");
+	for (i = 0; i < 5; i++)
+	{
+	scanf("%d", &a[i]);
+	}
+	for (i = 0; i < 5; i++)
+		if (max < a[i])
+			max = a[i];
+	printf("최대값 : %d\n", max);
+	return 0;
+}
