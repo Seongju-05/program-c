@@ -1,0 +1,26 @@
+// n명 학생의 성적을 입력받아 평균 점수를 소수점 둘째자리까지
+// 나타내주는프로그램을 작성하시오.
+// [입력 결과]
+// 3
+// 70 85 93
+// [출력 결과]
+// 평균 : 82.67
+
+#pragma warning (disable : 4996)
+#include <stdio.h>
+int main ()
+{
+	int a[20];
+	int i, n = 0;
+	float avg = 0;
+	scanf("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		scanf("%d", &a[i]);
+		avg = avg + a[i];
+	}
+
+	avg /= n;
+	printf("평균 : %.2f\n", avg);
+	return 0;
+}
