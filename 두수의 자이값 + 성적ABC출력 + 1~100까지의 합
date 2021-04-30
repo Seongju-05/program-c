@@ -1,0 +1,65 @@
+# pragma (disable : 4996)
+#include <stdio.h>
+
+
+int main()
+{
+	//두 정수를 입력받아 그 차이를 출력
+	//예를 들어 5 9 입력받으면 4가 출력
+	//그리고 9 5를 입력받아도 4가 출력
+	//항상 양의 차이값이 출력되도록 하시오.
+	int n1 , n2, abs;
+	scnaf("%d %d", &n1, &n2);
+	if (n1 > n2)
+		abs = n1 - n2;
+	else
+		abs = n2 - n1;
+	printf("차이 : %d\n", abs);
+
+	return 0;
+}
+
+
+ # pragma (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	//국어 , 수학, 프로그래밍 성적을 입력받아
+	//평균을 내고, 그 평균점수가
+	//90점 이상이면 'A'출력, 80점 이상이면 'B'
+	//70점 이상이면 'C' 60점 이상이면 'D'
+	//60점미만이면 'F'를 출력하는 프로그램을 만드세요.
+	int n1, n2, n3, abs;
+	scnaf("%d %d %d", &n1, &n2, &n3);
+	abs = (n1 + n2 + n3) / 3.0;
+	if (abs >= 90)
+		printf("A\n");
+	else if (abs >= 80)
+		printf("B\n");
+	else if (abs >= 70)
+		printf("C\n");
+	else if (abs >= 60)
+		printf("D");
+	else
+		printf("F");
+	return 0;
+}
+
+
+# pragma (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	int sum = 0, num = 0;
+	while (1) { // break 사용해서 탈출하기
+		//1~100까지의 합을 구하도록 하시오.
+		sum += ++num;
+		if (num >= 100)
+			break;
+
+	}
+	printf("총합 : %d\n", sum);
+	return 0;
+}
