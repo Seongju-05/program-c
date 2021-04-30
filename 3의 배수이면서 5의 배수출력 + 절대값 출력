@@ -1,0 +1,39 @@
+# pragma (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	//1~200까지 3의 배수이면서 5의 배수인 숫자를 출력하시오.(5개 마다 세줄에서 출력)
+	int a, cnt = 1;
+	for (a = 1; a <= 200; a++)
+		if (a % 3  == 0 && a % 5 == 0) {
+			printf("%4d", a);
+			cnt++;
+			if (cnt == 5) {
+				printf("\n");
+				cnt = 0;
+			}
+		}
+	return 0;
+}
+
+
+# pragma (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	//절대값 출력하는 프로그램을 만드시오.
+	// -5 -> 5, 5 -> 5
+	int a, abs;
+	scnaf("%d", &a);
+	if (a < 0)
+		abs = a * -1;
+	else
+		abs = a;
+	printf("절대값 : %d\n", abs);
+	// 3황 연산자 ? :
+	abs = a < 0 ? a * -1 : a;
+	printf("절대값 : %d\n", abs);
+	return 0;
+}
