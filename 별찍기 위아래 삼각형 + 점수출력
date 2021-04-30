@@ -1,0 +1,72 @@
+//    *
+//   ***
+//  *****
+// *******
+//*********
+// *******
+//  *****
+//   ***
+//    *
+
+# pragma (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+    int a = 0, b = 0, c = 0;
+    for (int a = 0; a < 5; a++)
+    {
+        for (int b = 0; b < 4 - a; b++)
+        {
+            printf(" ");
+        }
+        for (int c = b; c < a * 2 + 1; c++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    for (int a = 4; a > 0; a--)
+    {
+        for (int b = 0; b < 5 - a; b++)
+        {
+            printf(" ");
+        }
+        for (int c = 0; c < a * 2 - 1; c++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+//100 ~91이면 A출력,90 ~81이면 B출력,
+//80 ~71이면 C출력,70이하면 F출력,
+# pragma (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	int x;
+	printf("점수 : ");
+	scanf("%d", &x);
+	if (x > 90 && x <= 100)
+	{
+		printf("A\n");
+	}
+	if (x > 80 && x <= 90)
+	{
+		printf("B\n");
+	}
+	if (x > 70 && x <= 80)
+	{
+		printf("C\n");
+	}
+	if (x > 0 && x <= 70)
+	{
+		printf("F\n");
+	}
+	return 0;
+}
