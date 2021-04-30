@@ -1,0 +1,54 @@
+# pragma (disable : 4996)
+#include <stdio.h>
+
+//while문을 사용하여 구구단 3단을 출력하는 프로그램을 만드시오.
+int main()
+{
+	int a = 3, b = 1;
+	while (b < 10)
+	{
+		printf("%d * %d = %d\n", a, b, a * b);
+		b++;
+	}
+	return 0;
+}
+
+
+# pragma (disable : 4996)
+#include <stdio.h>
+
+ //정수를 입력 받아 총합을 구하는 프로그램을 만드시오. (0을 입력받으면 종료함)
+int mian()
+{
+	int a, sum;
+	printf("숫자를 입력하세요.\n");
+	scanf ("%d", &a);
+	while(1)
+	{
+		printf("0을 입력시 종료");
+		scanf ("%d", &a);
+		if (a == 0)
+		{
+			break;
+		}
+		sum= sum + a;
+	}
+	printf("총합 : %d", sum);
+	return 0;
+}
+
+
+# pragma (disable : 4996)
+#include <stdio.h>
+
+// 1~9까지의 숫자를 입력 받아 해당 구구단을 출력하는 프로그램을 만드시오.
+int main()
+{
+	int a;
+	scanf ("%d", &a);
+	for (int b = 1; b < 10; b++)
+	{
+		printf("%d * %d = %d\n", a, b, a * b);
+	}
+	return 0;
+}
