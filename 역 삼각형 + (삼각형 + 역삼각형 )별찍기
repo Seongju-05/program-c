@@ -1,0 +1,70 @@
+//역 삼각형 별찍기
+# pragma (disable : 4996)
+#include <stdio.h>
+
+//*********
+// *******
+//  *****
+//   ***
+//    *
+int main()
+{
+	int a, b, c;
+	for (a = 5; a >= 1; a--)
+	{
+		for (b = 1; b <= 5 - a; b++)
+		{
+			printf(" ");
+		}
+		for (c = 1; c <= a * 2 - 1; c++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	return 0;
+}
+
+
+//삼각형 + 역삼각형
+# pragma (disable : 4996)
+#include <stdio.h>
+
+//*********
+// *******
+//  *****
+//   ***
+//    *
+//   ***
+//  *****
+// *******
+//*********
+int main()
+{
+	int a = 0, b = 0, c = 0;
+	for (a = 5; a > 0; a--) // 피라미드 층수
+	{
+		for (b = 1; b < 6 - a; b++) // blank 갯수
+		{
+			printf(" ");
+		}
+		for (c = 0; c < a * 2 - 1; c++) // 별 홀수개 출력하기
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	for (a = 1; a < 5; a++) // 층수
+	{
+		for (b = 0; b < 4 - a; b++) // blank 갯수
+		{
+			printf(" ");
+	 }
+		for (c = 0; c < a * 2 + 1; c++) // 같은 방식으로 쌓기
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	return 0;
+}
