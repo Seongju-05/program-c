@@ -1,0 +1,53 @@
+//*****
+//****
+//***
+//**
+//*
+//
+//*
+//**
+//***
+//****
+//*****
+//*****
+//****
+//***
+//**
+//*
+
+# pragma (disable : 4996)
+#include <stdio.h>
+
+
+int main()
+{
+
+	int i, j;
+	for (i = 5; i > 0; i--)
+	{
+		for (j = 0; j < i; j++) {
+			printf("*");
+		}
+		printf("\n");
+	}
+
+
+	
+	int a, b;
+	for (a = 5; a >= 0; a--)
+	{
+		for (b = 0; b < 5 - a; b++)
+		{
+			printf("*");
+		}
+		printf("\n");
+		}
+	for (a = 5; a > 0; a--)
+	{
+		for (b = 0; b < a; b++) {
+			printf("*");
+		}
+		printf("\n");
+	}
+	return 0;
+}
