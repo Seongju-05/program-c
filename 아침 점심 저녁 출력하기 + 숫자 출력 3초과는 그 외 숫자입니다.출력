@@ -1,0 +1,62 @@
+# pragma (disable : 4996)
+#include <stdio.h>
+
+// 거의 사용 안함(사용금지)
+// 아침 점심 저녁 출력하기
+int main()
+{
+	char day;
+	printf("M : Morning, A : Afternoon, E : Evening\n");
+	printf("M,m,A,a,E,e 중에 입력 : ");
+	while (1)
+	{
+		scanf(" %c", &day);
+		if (day == 'x' || day == 'X')
+			return 0;
+		switch (day)// 한글 처리 가능
+		{
+		case 'M':
+		case 'm':
+			printf("Good Morning~~\n");
+			break;
+		case 'A':
+		case 'a':
+			printf("Good Afternoon~~\n");
+			break;
+		case 'E':
+		case 'e':
+			printf("Good Evening~~\n");
+		default:
+			printf("다시 입력해주세요.");
+		}
+	}
+		return 0;
+}
+
+// 숫자 출력 3초과는 그 외 숫자입니다.출력
+# pragma (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	int n;
+	printf("자연수 입력 : ");
+	scnaf("%d", &n);
+	if (n == 1)
+		goto ONE;
+	else if (n == 2)
+		goto TWO;
+	else
+		goto OTHER;
+	 label
+ONE :
+	printf("1입니다.\n");
+	goto END;
+TWO :
+	printf("2입니다.\n");
+	goto END;
+OTHER:
+	printf("그 외 숫자입니다.\n");
+END :
+	return 0;
+}
