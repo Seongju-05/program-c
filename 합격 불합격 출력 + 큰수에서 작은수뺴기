@@ -1,0 +1,42 @@
+//80점 이상 축하합니다. 합격입니다.출력
+//80점 미만 죄송합니다. 불합격입니다.출력
+# pragma (disable : 4996)
+#include <stdio.h>
+
+int mian()
+{
+	int a;
+	printf("점수를 입렵하세요 : ");
+	scanf("%d", &a);
+	if (a >= 80)
+	{
+		printf("축하합니다. 합격입니다.\n");
+	}
+	else
+	{
+		printf("죄송합니다. 불합격입니다.\n");
+	}
+	return 0;
+}
+
+
+// 두수를 입력받아
+//앞에 수가 더 크면 앞에서 뒤를 빼고
+//뒤의 수가 더 크면 뒤에서 앞을 빼기
+# pragma (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	int a, b;
+	scanf_s("%d %d", &a, &b);
+	if (a > b)
+	{
+		printf("%d\n", a - b);
+	}
+	else
+	{
+		printf("%d\n", b - a);
+	}
+	return 0;
+}
