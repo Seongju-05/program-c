@@ -1,0 +1,49 @@
+//3과 4,5의 배수 출력
+# pragma (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	int n, cnt = 0;
+	for (n = 1; n < 100; n++) {
+		if (n % 3 == 0) {
+			printf("%4d", n);
+			cnt++;
+		}
+		if (cnt % 5 == 0)
+			printf("\n");
+	}
+	for (n = 1; n < 100; n++) {
+		if (n % 4 == 0) {
+			printf("%4d", n);
+			cnt++;
+		}
+		if (cnt % 5 == 0)
+			printf("\n");
+	}
+	return 0;
+}
+
+
+
+# pragma (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	int n, cnt = 0;
+	for (n = 1; n <= 100; n++)
+	{
+		if (n % 3 == 0 || n % 4 == 0)
+		{
+			printf("%4d", n);
+			cnt++;
+		}
+		if (cnt % 6 == 0)
+		{
+			cnt = 1;
+			printf("\n");
+		}
+	}
+	return 0;
+}
