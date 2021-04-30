@@ -1,0 +1,69 @@
+# pragma (disable : 4996)
+#include <stdio.h>
+
+	int main()
+{
+	//짝수의 구구단만 아래처럼 출력하는 프로그램을 만드시오.
+	/*
+	2* 1 = 2
+	2* 2 = 4
+
+	4 * 1 = 4
+	4 * 2 = 8
+	4 * 3 = 12
+	4 * 4 = 16
+
+	6 * 1 = 6
+	6 * 2 = 12
+	6 * 3 = 16
+	*/
+  //간단하게 쓴것
+  int main ()
+  {
+	int a,b;
+	for (a = 2; a < 10 && a % 2 == 0; a += 2)
+	{
+		printf("=========================\n");
+		for (b = 1; b <= a; b++) {
+			printf("%d * %d = %d\n", a, b, a * b);
+		}
+	}
+	return 0;
+	}
+
+//복잡하게 풀어쓴것
+# pragma (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	int a, b;
+	for (a = 2; a < 10; a++)
+	{
+		if (a % 2) // 홀수하면, a % 2 == 1, a % 2 != 0
+			continue;
+		for (b = 1; b <= 10; b++)
+		{
+			if (a < b)
+				break;
+			printf("%d * %d = %d\n", a, b, a * b);
+		}
+		printf("==============================\n");
+	}
+	return 0;
+}
+
+# pragma (disable : 4996)
+#include <stdio.h>
+
+// 숫자 반대로 출력
+//81 -> 18  72 -> 27 63 -> 36 54 -> 45
+int main()
+{
+	int a;
+	for (int a = 1; a < 5; a++)
+	{
+		printf("%d%d\n%d%d\n\n", 9 - a, a, a, 9 - a);
+	}
+	return 0;
+}
