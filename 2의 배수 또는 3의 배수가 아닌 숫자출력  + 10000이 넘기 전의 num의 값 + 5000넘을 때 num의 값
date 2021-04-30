@@ -1,0 +1,51 @@
+# pragma (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	int sum = 0, num = 0;
+	while (1) { // break 사용해서 탈출하기
+		//1~100까지의 합을 구하도록 하시오.
+		//총합이 10000이 넘기 전의 num의 값은 얼마?
+		sum += ++num;
+		if (num > 10000)
+			break;
+
+	}
+	printf("총합 : %d\n", sum);
+	printf("그 때의 num : %d\n", sum);
+	return 0;
+}
+
+# pragma (disable : 4996)
+#include <stdio.h>
+	int main()
+{
+	int sum = 0, num = 0;
+	while (1) { // break 사용해서 탈출하기
+		//1~100까지의 합을 구하도록 하시오.
+		//총 합이 5000넘을 때 num의 값은 얼마?
+		sum += ++num;
+		if (sum > 5000)
+				break;
+	}
+	printf("총합 : %d\n", sum);
+	printf("그 때의 num : %d\n", --num);
+	return 0;
+}
+
+# pragma (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	//2의 배수 또는 3의 배수가 아닌 숫자를 출려하시오.
+	int n;
+	for (n = 0; n < 20; n++)
+	{
+		if (n % 2 == 0 || n % 3 == 0)
+			continue;
+		printf("%4d", n);
+	}
+	return 0;
+}
