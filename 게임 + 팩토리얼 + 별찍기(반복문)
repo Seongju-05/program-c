@@ -1,0 +1,61 @@
+# pragma (disable : 4996)
+#include <stdio.h>
+
+int main()
+//동생과나는 숫자 더하기 게임을 하였다. 동생이 3이라 하고,내가 6이라 하면 
+//3과 6사이의 정수 숫자 곱 (=360)을 먼저말하면 되는 게임이다.
+//숫자 2개를 입력받아 그 사이의 값을 모두 곱하는 프로그램을 만드시오.
+{
+	int s, e, t;//동새 start, 나 esd
+	int mul = 1;
+	scanf("%d %d", &s, &e);
+	if (s > e)
+	{
+		t = s;
+		s = e;
+		e = t;
+	}
+	for (mul = 1; s <= e; s++)
+		mul *= s;
+	printf("%d\n", mul);
+	return 0;
+}
+
+
+# pragma (disable : 4996)
+#include <stdio.h>
+
+//팩토리얼은 아래와 같다.10 미만의 정수를 입력받아 팩토리얼을 구하는 프로그램을 만드시오.
+//n! = n × (n - 1) × (n - 2) ×...×1
+int main()
+{
+	int a,b,sum = 1;
+	scanf("%d", &a);
+	for (b = a; a >= 1; a--)
+	{
+		sum = sum * a;
+	}
+		printf("%d", sum);
+
+	return 0;
+}
+
+
+// *****
+// *****
+// *****
+// *****
+// *****
+int main()
+{
+	int a,b;
+	for (a = 1; a < 6; a++)
+	{
+		for (b = 1; b < 6; b++)
+		{
+			printf("*");
+		}
+	printf("\n");
+	}
+	return 0;
+}
