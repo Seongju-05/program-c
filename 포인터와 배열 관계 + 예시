@@ -1,0 +1,49 @@
+포인터와 배열의 관계
+
+// 포인터 변수를 저장해주는 주소
+// 포인터 예
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	int a[5] = { 0, 1, 2, 3, 4 };
+	printf("%d %d\n", a[0], a[1]);
+	printf("%p %p\n", &a[0], &a[1]);
+	// printf("%d\n", &a[1] - &a[0]);
+
+	return 0;
+}
+
+
+// 배열의 예
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	int arr[5] = { 1, 2, 3, 4, 5 };
+	int* pArr = arr;
+	printf("%d \n", *pArr);
+	printf("%d \n", *(++pArr));
+	printf("%d \n", *(++pArr));
+	printf("%d \n", *(pArr + 1));
+	printf("%d \n", *(pArr + 2));
+
+	return 0;
+}
+
+
+포인터 배열 예시 1
+#pragma warning (disable : 4996)
+#include <stdio.h>
+ 
+int main()
+{
+	int a = 1, b = 2, c = 3;
+	int* pArr[3] = { &a, &b, &c };
+	printf("%d \n", *pArr[0]);
+	printf("%d \n", *pArr[1]);
+	printf("%d \n", *pArr[2]);
+	return 0;
+}
