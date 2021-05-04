@@ -1,0 +1,87 @@
+//도수분포표
+
+//#pragma warning (disable  :4996)
+//# include <stdio.h>
+//
+//int main()
+//{
+//	int a[20] = { 90, 80, 70, 95, 85, 75, 65, 55, 45, 35, 25, 15, 90, 80, 70, 60, 50, 40, 30, 20 };
+//	int i, histo[11] = { 0, };
+//	for (i = 0; i < 20; i++)
+//		histo[a[i] / 10]++;
+//	for (i = 0; i <= 10; i++)
+//		printf("%3d: %3d\n", i * 10, histo[i]);
+//
+//		return 0;
+//}
+
+
+//도수분포표 응용 버전
+
+//#pragma warning (disable  :4996)
+//# include <stdio.h>
+//
+//int main()
+//{
+//	int a[20] = { 90, 80, 70, 95, 85, 75, 65, 55, 45, 35, 25, 15, 90, 80, 70, 60, 50, 40, 30, 20 };
+//	int i, histo[11] = { 0, };
+//	for (i = 0; i < 20; i++)
+//	{
+//		histo[a[i] / 10]++;
+//	}
+//	for (i = 0; i <= 10; i++)
+//	{
+//		printf("%4d : ", i * 10, histo[i]);
+//		for (int a = 0; a < histo[i]; a++)
+//			printf("◎");
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+
+//// 학생 등수 구하기
+//#pragma warning (disable  :4996)
+//# include <stdio.h>
+//
+//int main()
+//{
+//	int a[20] = { 90, 80, 70, 95, 85, 75, 65, 55, 45, 35, 25, 15, 90, 80, 70, 60, 50, 40, 30, 20 };
+//	int rank[20] = { 0, };
+//	int i, j;
+//	for (i = 0; i < 20; i++)
+//	{
+//		rank[i] = 1;
+//		for (j = 0; j < 20; j++)
+//		{
+//			if (a[i] < a[j])
+//				rank[i]++;
+//		}
+//	}
+//	printf("학생 등수\n");
+//	for (i = 0; i < 20; i++)
+//		printf("학번: %3d 등수: %3d\n", i + 1, rank[i]);
+//	return 0;
+//}
+
+
+
+// 학생 등수 구하기
+#pragma warning (disable  :4996)
+# include <stdio.h>
+
+int main()
+{
+	int a[20] = { 90, 80, 70, 95, 85, 75, 65, 55, 45, 35, 25, 15, 90, 80, 70, 60, 50, 40, 30, 20 };
+	int rank[102] = { 0, }; // rank [0] ~ rank[101]
+	int i;
+	for (i = 0; i < 20; i++)
+		rank[a[i]]++;
+	rank[101] = 1;
+	for (i = 100; i >= 0; i--)
+		rank[i] = rank[i] + rank[i + 1];
+	printf("학번 점수 등수\n");
+	for (i = 0; i < 20; i++)
+		printf("%3d %5d %3d\n", i + 1, a[i], rank[a[i] + 1]);
+	return 0;
+}
