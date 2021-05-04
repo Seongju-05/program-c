@@ -1,0 +1,39 @@
+//예시 2
+#pragma warning (disable : 4996)
+#include <stdio.h>
+ 
+int main()
+{
+	char Arr[3][10] = { "kim", "soung", "ju" }; //2차원배열 
+	//char* pArr[3] = { "kim", "soung", "ju" };//포인터 배열
+	char* pArr[3] = { Arr[0], Arr [1], Arr [2] };//포인터 배열
+	printf("%s \n", pArr[0]);
+	printf("%s \n", pArr[1]);
+	printf("%s \n", pArr[2]);
+	return 0;
+	//arr[i] == *(arr + i)
+}
+
+
+//응용 예시 3
+#pragma warning (disable : 4996)
+#include <stdio.h>
+ 
+int main()
+{
+	char Arr[3][10] = { "kim", "soung", "ju" }; //2차원배열 
+	//char* pArr[3] = { "kim", "soung", "ju" };//포인터 배열
+	char* pArr[3] = { Arr[0], Arr[1], Arr[2] };//포인터 배열
+	printf("%s \n", pArr[0]);
+	printf("%s \n", pArr[1]);
+	printf("%s \n", pArr[2]);
+	//arr[i] == *(arr + i)
+	printf("%s \n", *pArr); // kim
+	printf("%s \n", *pArr + 1); // im
+	printf("%s \n", *pArr + 2); // m
+	
+	printf("%s \n", *pArr);
+	printf("%s \n", *(pArr + 1));
+	printf("%s \n", *(pArr + 2));
+	return 0;
+}
