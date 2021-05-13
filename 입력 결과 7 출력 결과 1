@@ -1,0 +1,41 @@
+//입력 결과 7
+// 8 1 5 7 3 8 2
+//출력 결과 1
+
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+int a, d [110];
+
+int f()
+{
+	int temp = 0;
+	for (int i = 0; i < a; i++)
+	{
+		if (d[i] > temp)
+		{
+			temp = d[i];
+		}
+	}
+	for (int i = 0; i < a; i++)
+	{
+		if (d[i] == temp)
+		{
+			return i + 1;
+			break;
+		}
+	}
+}
+
+int main()
+{
+	scanf("%d", &a);
+	
+	for (int i = 0; i < a; i++)
+	{
+		scanf("%d", &d[i]);
+
+		printf("%d", f());
+		return 0;
+	}
+}
