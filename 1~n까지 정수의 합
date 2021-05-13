@@ -1,0 +1,24 @@
+//정수 한개를 입력 받아 1부터 n까지 정수의 합을 
+//출력하는 프로그램을 작성하시오.
+//단, 입력 값의 범위는  1 <= n <= 10.000이다.
+
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+int n;
+int f(int t) 
+{
+	int a = 1 , b = 0;
+	while (n >= a)
+	{
+		b += a++;
+	}
+	return b;
+}
+
+int mian()
+{
+	scanf("%d", &n);
+	printf("%d\n", f(n));
+	return 0;
+}
