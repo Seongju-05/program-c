@@ -1,0 +1,30 @@
+//한자리 정수를 입력 받아 다음과 같이 출려하시오.
+
+int main()
+{
+	int i, j, a;
+	char arr[100][100] = { 0, };
+	printf("수 입력: ");
+	scanf("%d", &a);
+	for (i = 0; i < a; i++)
+	{
+		for (j = 0; j < a; j++)
+			if (i == a - 1 || j == 0 || i == j)
+			{
+				arr[i][j] = '*';
+			}
+			else
+			{
+				arr[i][j] = ' ';
+			}
+	}
+	for (i = 0; i < a; i++)
+	{
+		for (j = 0; j < a; j++)
+		{
+			printf("%c", arr[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
