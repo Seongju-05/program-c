@@ -1,0 +1,23 @@
+//다음과 같은 n*m 출력하는 프로그램들 작성하시오.
+//단, 입력 값의 범위는 1 <= n, m <=100이다.
+
+#include <stdio.h>
+
+int n;
+int f(int k)
+{
+	int i;
+	int sum = 0;
+	for (i = 1; i <= k; i++)
+	{
+		sum += i;
+	}
+	return 0;
+}
+
+int main()
+{
+	scanf("%d", &n);
+	printf("%d\n", f(n));
+	return 0;
+}
