@@ -1,0 +1,36 @@
+#pragma warning (disable : 4996)
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int i;
+	char str[256]; // 1차원 배열
+	printf("Enter a nuber");
+	// fgets ( buffer, 256, stdin);
+	gets_s(str, 256);
+	i = atoi(str); // 문자열을 숫자로 변환
+	printf("입력된 정수값 : %d, 의 2배의 값 : %d.\n", i, i * 2);
+	return 0;
+}
+
+
+
+
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	int i;
+	char arr[50];
+	printf("Enter a number: ");
+	scanf("%d", &i);
+	_itoa(i, arr, 10);
+	printf("decimal : %s\n", arr);
+	_itoa(i, arr, 16);
+	printf("hexadecimal: %s\n", arr);
+	_itoa(i, arr, 2);
+	printf("binary: %s\n", arr);
+	return 0;
+}
