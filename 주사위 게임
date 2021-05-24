@@ -1,0 +1,47 @@
+// 주사위 게임
+
+//#pragma warning(disable:4996)
+//#include <stdio.h>
+//#include <time.h>
+//#include <stdlib.h>
+//
+//	int main(void)
+//	{
+//		srand((unsigned int)time(NULL));
+//		//srand((unsigned)time(0));
+//		// 주사위 : 1~6 범위
+//		int n1, n2;
+//		n1 = rand() % 6 + 1;
+//		n2 = rand() % 6 + 1;
+//		printf("주사위 : %d %d\n", n1, n2);
+//		return 0;
+//	}
+
+
+//#pragma warning (disable:4996)
+//#include<stdio.h>
+//#include <stdlib.h>
+//#include <time.h>
+//
+//int main() {
+//	srand(time(NULL));
+//	int R1 = rand() % 6 + 1, R2 = rand() % 6 + 1, Go = 0;
+//	char ask;
+//	do {
+//		printf("주사위 게임을 하시겠습니까?(y/n)");
+//		scanf("%c", &ask);
+//		getchar();
+//		if (ask == 'y') {
+//			Go = 0;
+//			do {
+//				R1 = rand() % 6 + 1, R2 = rand() % 6 + 1;
+//				Go += R1 + R2;
+//				printf("주사위 : %d %d\n", R1, R2);
+//				if (R1 == R2)
+//					printf("더블입니다.\n");
+//			} while (R1 == R2);
+//			printf("%d칸 전진하세요.\n", Go);
+//		}
+//	} while (ask == 'y');
+//	return;
+//}
