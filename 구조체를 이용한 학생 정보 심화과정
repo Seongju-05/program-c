@@ -1,0 +1,114 @@
+5명 이름 넣기 노가다 버전
+
+#pragma warning (disable : 4996)
+#include<stdio.h>
+#include <string.h>
+
+struct Student
+{
+	char name[20]; //학생 이름
+	int stuNum; // 학생 번호
+	int age; // 학생 나이
+	char address[100]; // 집 주소
+};
+
+int main()
+{
+	struct Student class13[20]; // 1학년 2반 20명 관리용
+	strcpy(class13[0].name, "홍길동");
+	class13[0].age = 17;
+	class13[0].stuNum = 1301;
+	strcpy(class13[0].address, " 대구시 달성군 창리로 11길");
+
+	printf("====1학년 3반 학생 정보====\n");
+	printf("이름 : %s\n", class13[0]. name);
+	printf("나이 : %d\n", class13[0]. age);
+	printf("학번 : %d\n", class13[0]. stuNum);
+	printf("주소 : %s\n", class13[0]. address);
+
+	strcpy(class13[1].name, "아무개");
+	class13[1].age = 17;
+	class13[1].stuNum = 1302;
+	strcpy(class13[1].address, " 대구시 달성군 창리로 12길");
+
+	printf("====1학년 3반 학생 정보====\n");
+	printf("이름 : %s\n", class13[1].name);
+	printf("나이 : %d\n", class13[1].age);
+	printf("학번 : %d\n", class13[1].stuNum);
+	printf("주소 : %s\n", class13[1].address);
+
+	strcpy(class13[2].name, "김아무");
+	class13[2].age = 17;
+	class13[2].stuNum = 1303;
+	strcpy(class13[2].address, " 대구시 달성군 창리로 13길");
+	
+	printf("====1학년 3반 학생 정보====\n");
+	printf("이름 : %s\n", class13[2].name);
+	printf("나이 : %d\n", class13[2].age);
+	printf("학번 : %d\n", class13[2].stuNum);
+	printf("주소 : %s\n", class13[2].address);
+
+	strcpy(class13[3].name, "이무개");
+	class13[3].age = 17;
+	class13[3].stuNum = 1304;
+	strcpy(class13[3].address, " 대구시 달성군 창리로 14길");
+
+	printf("====1학년 3반 학생 정보====\n");
+	printf("이름 : %s\n", class13[3].name);
+	printf("나이 : %d\n", class13[3].age);
+	printf("학번 : %d\n", class13[3].stuNum);
+	printf("주소 : %s\n", class13[3].address);
+
+	strcpy(class13[4].name, "손두개");
+	class13[4].age = 17;
+	class13[4].stuNum = 1305;
+	strcpy(class13[4].address, " 대구시 달성군 창리로 11길");
+
+	printf("====1학년 3반 학생 정보====\n");
+	printf("이름 : %s\n", class13[4].name);
+	printf("나이 : %d\n", class13[4].age);
+	printf("학번 : %d\n", class13[4].stuNum);
+	printf("주소 : %s\n", class13[4].address);
+	return 0;
+}
+
+깔끔한 버전
+
+#pragma warning (disable : 4996)
+#include<stdio.h>
+#include <string.h>
+
+struct Student
+{
+	char name[20]; //학생 이름
+	int stuNum; // 학생 번호
+	int age; // 학생 나이
+	char address[100]; // 집 주소
+};
+
+int main()
+{
+	struct Student class13[20]; // 1학년 2반 20명 관리용
+	for (int i = 0; i < 5; i++)
+	{
+		printf("이름 입력 : ");
+		scanf("%s", class13[i].name);
+		printf("주소 입력 : ");
+		scanf(" %[^\n]", class13[i].address);
+		printf("나이 입력 : ");
+		scanf("%d", &class13[i].age);
+		printf("학번 입력 : ");
+		scanf("%d", &class13[i].stuNum);
+	}
+
+	printf("====1학년 3반 학생 정보====\n");
+	for (int i = 0; i < 5; i++)
+	{
+		printf("이름 : %s\n", class13[i].name);
+		printf("나이 : %d\n", class13[i].age);
+		printf("학번 : %d\n", class13[i].stuNum);
+		printf("주소 : %s\n", class13[i].address);
+	}
+	return 0;
+}
+  
