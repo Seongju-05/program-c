@@ -1,0 +1,14 @@
+#pragma warning (disable : 4996)
+#include<stdio.h>
+// 구조체 structure, struct
+//int x, y;
+struct point { // 구조체로 점을 정의
+	int x, y; // 멤버
+};
+
+int main()
+{
+	struct point p = { 4,5 };
+	printf("x = %d, y = %d\n", p.x, p.y); // 멤버에 접근하기 위해 .을 사용
+	return  0;
+}
