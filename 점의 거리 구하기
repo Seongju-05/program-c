@@ -1,0 +1,25 @@
+#pragma warning (disable : 4996)
+#include<stdio.h>
+#include <math.h>
+
+typedef struct Point
+{
+	int x;
+	int y;
+
+}Point;
+
+int main()
+{
+	Point p1; // 점1
+	Point p2; // 점2
+	p1.x = 30; 
+	p1.y = 20;
+	p2.x = 60;  
+	p2.y = 50;
+	int a = p2.x - p1.x; // 선 a의 길이
+	int b = p2.y - p1.y;  // 선 b의 길이
+	double sol = sqrt(pow(a, 2) + pow(b, 2));
+	printf("%f\n", sol);
+	return 0;
+}
