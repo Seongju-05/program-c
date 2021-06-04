@@ -1,0 +1,88 @@
+#pragma warning (disable : 4996)
+#include <stdio.h>
+#include <math.h>
+
+struct contact {
+	char name[20];
+	char cell_phone[12];
+	char description[100];
+};
+
+int main(void) {
+
+	struct contact list[100];
+	int person=0;
+	int i, j;
+	char a[20] = { 0, };
+	char f[4][10] = { {"추가"}, {"삭제"}, {"목록"}, {"검색"} };
+	printf("'추가' '삭제' '목록' '검색'중 실행하고 싶은 걸 입력\n ");
+	printf("\n");
+	printf(" = 을 누르면 종료!!");
+	while (1) {
+		scanf("%s", a);
+		if (strcmp(a, "=")==0)  // a가 =이랑 같으면 0을 반환하므로 if 문 실행
+		{
+			break;
+		}
+		// 추가기능
+		for (i = 0; strcmp(a, f[i]) != 0 && i < 4; i++); // 추가 기능인것을 확인해주기 위해 해준 식
+		if (i == 0) 
+		{ 
+			printf("이름 입력 : ");
+			scanf("%s", list[person].name);
+			printf("전화 번호 입력 :  ");
+			scanf(" %s", list[person].cell_phone);
+			printf("간단한 소개 입력 :  ");
+			scanf(" %s", list[person].description);
+			person++;
+			printf("\n");
+		}
+
+		// 삭제
+		if (i == 1) 
+		{
+			char name[20];
+			scanf("%s", name);
+			for (j = 0; strcmp(a, f[j]) != 0 && j < person; j++);
+			for (; j < person - 1; j++)
+			{
+				struct contact temp;
+				temp = list[j];
+				list[j] = list[j + 1];
+				list[j] = temp;
+			}
+			strcpy /*복사해주는 함수*/ (list[j].name, "                       "); // 공백을 복사해 넣겠다
+			strcpy(list[j].cell_phone, "                       ");
+			strcpy(list[j].description, "                       ");
+			person--; //덮으려고 한 person
+			printf("\n");
+		}
+
+		//목록
+		if (i == 2) 
+		{
+			int j;
+			for (j = 0; j < person; j++) //입력한 만큼 출력하기 위해
+			{
+				printf("\n%s\n", list[j].name);
+				printf("%s\n", list[j].cell_phone);
+				printf("%s\n", list[j].description);
+				printf("\n");
+			}
+		}
+
+		// 검색
+		if (i == 3) 
+		{
+			char name[20];
+			int j;
+			scanf("%s", name);
+			for (j = 0; strcmp(a, f[j]) != 0 && j < person; j++);
+			printf("%s\n", list[j].name);
+			printf("%s\n", list[j].cell_phone);
+			printf("%s\n", list[j].description);
+		}
+	}
+	return 0;
+
+}
