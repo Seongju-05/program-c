@@ -1,0 +1,12 @@
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+int mian()
+{
+	FILE* fp = fopen("myData.txt", "w");
+	fprintf(fp, "%s %d\n", "홍길동", 34);
+	fclose(fp);
+	return 0;
+}
+// 실행하면 아무것도 나오지 않음
+//하드 디스크 같은 경로에 myData.txt가 생성
