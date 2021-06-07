@@ -1,0 +1,17 @@
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+int main()
+{
+	FILE* fp;
+	fp = fopen("myfile.txt", " r ");
+	char name[80] =  "";
+	int myage;
+	while (!feof(fp)) //파일의 끝까지 체크
+	{
+		fscanf(fp, "%s %d", name, &myage);
+		printf("%s %d\n", name, myage);
+	}
+	fclose(fp);
+	return 0;
+}
