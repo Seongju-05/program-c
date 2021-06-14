@@ -1,0 +1,33 @@
+#pragma warning (disable : 4996)
+#include<stdio.h>
+
+typedef struct data 
+{
+	char name[20];
+	int kor, eng, math;
+}Student;
+
+
+	Student score(Student s1, Student s2)
+	{
+	Student sum;
+	strcpy(sum.name, "총합");
+	sum.kor = s1.kor + s2.kor; // 국어점수 총합
+	sum.eng = s1.eng + s2.eng; // 사회점수 총합
+	sum.math = s1.math + s2.math; // 수학점수 총합
+	return sum;
+}
+
+
+	int main() {
+	Student s1, s2, sum;
+	scanf("%s %d %d %d", s1.name, &s1.kor, &s1.eng, &s1.math);
+	scanf("%s %d %d %d", s2.name, &s2.kor, &s2.eng, &s2.math);
+
+	sum = score(s1, s2);
+
+	printf("이름 : %s, 국어 : %d, 영어 : %d, 수학 : %d\n", s1.name, s1.kor, s1.eng, s1.math);
+	printf("이름 : %s, 국어 : %d, 영어 : %d, 수학 : %d\n", s2.name, s2.kor, s2.eng, s2.math);
+	printf("%s : %d %d %d", sum.name, sum.kor, sum.eng, sum.math);
+	return 0;
+}
