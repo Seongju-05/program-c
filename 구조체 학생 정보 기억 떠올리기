@@ -1,0 +1,25 @@
+#pragma warning (disable : 4996)
+#include <stdio.h>
+
+//typedef struct data Student;
+typedef struct data
+{
+	char name[20];
+	int age;
+	int Number;
+}Student;
+
+int main()
+{
+	Student me;
+	printf("이릅 입력 : ");
+	scanf("%s", me.name);
+
+	printf("나이 입력 : ");
+	scanf("%d", &me.age); 
+	
+	printf("학번 입력 :");
+	scanf("%d", &me.Number);
+	printf("저의 이름은 %s, 나이는 %d이고 학번은 %d입니다.\n", me.name, me.age, me.Number);
+	return 0;
+}
