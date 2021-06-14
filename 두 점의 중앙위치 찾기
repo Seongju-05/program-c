@@ -1,0 +1,17 @@
+#pragma warning (disable : 4996)
+#include<stdio.h>
+
+typedef struct _p
+{
+	double x, y;
+}Point;
+
+int main()
+{
+	Point p1, p2;
+	printf("점 입력 : ");
+	scnaf("%lf %lf", &p1.x, &p1.y);
+	scnaf("%lf %lf", &p2.x, &p2.y);
+	printf("%1.lf %1.lf", (p1.x + p2.x) / 2, (p1.y + p2.y) / 2);
+	return 0;
+}
