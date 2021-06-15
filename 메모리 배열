@@ -1,0 +1,68 @@
+#pragma warning (disable : 4996)
+#include<stdio.h>
+#include<stdlib.h> // malloc : memory allocation
+
+int main()
+{
+	int arr[4] = { 1, 2, 3, 4 };
+	 int 4byte : total 16byte
+	int* pArr;
+	pArr = (int*)malloc(16);
+	for (int i = 0; i < 4; i++)
+	{
+		pArr[i] = i * i;
+		printf("pArr[i] = %d\n", pArr[i]);
+	}
+	free(pArr);
+	return 0;
+}
+
+
+
+#pragma warning (disable : 4996)
+#include<stdio.h>
+#include<stdlib.h> // malloc : memory allocation
+
+int main()
+{
+	int arr[4] = { 1, 2, 3, 4 };
+	// int 4byte : total 16byte
+	int* pArr;
+	int n;
+	pArr = (int*)malloc(sizeof(int) * n);
+	for (int i = 0; i < n; i++)
+	{
+		pArr[i] = i * i;
+		printf("pArr[i] = %d\n", pArr[i]);
+	}
+	free(pArr);
+	return 0;
+}
+
+
+
+
+#pragma warning (disable : 4996)
+#include<stdio.h>
+#include<stdlib.h> // malloc : memory allocation
+
+int main()
+{
+	int arr[4] = { 1, 2, 3, 4 };
+	 //int 4byte : total 16byte
+	int* pArr;
+	int n;
+	pArr = (int*)malloc(sizeof(int) * n);
+	if (pArr == NULL)
+	{
+		printf("메모리 공간 초과");
+		return 0;
+	}
+	for (int i = 0; i < n; i++)
+	{
+		pArr[i] = i * i;
+		printf("pArr[i] = %d\n", pArr[i]);
+	}
+	free(pArr);
+	return 0;
+}
