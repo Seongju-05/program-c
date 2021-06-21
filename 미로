@@ -1,0 +1,78 @@
+//미로 만들기
+#pragma warning (disable 4996)
+#include <stdio.h>
+
+int m[9][9] = //maze
+{
+	{2,2,2,2,2,2,2,2,2},
+	{2,0,0,0,0,0,0,0,2},
+	{2,0,2,2,0,2,2,0,2},
+	{2,0,2,0,0,2,0,0,2},
+	{2,0,2,0,2,0,2,0,2},
+	{2,0,0,0,0,0,2,0,2},
+	{2,2,0,2,2,0,2,2,2},
+	{2,0,0,0,0,0,0,0,2},
+	{2,2,2,2,2,2,2,2,2},
+};
+
+int si, sj, ei, ej, success, idx, path_i[100], path_j[100];
+
+// s : start, 출발점 e : end, 도착점 idx 경로 배열 인덱스
+// ri, rj : 지나간 길ㅇ르 저장함(i는 행, j는 열)
+
+int visit(int, int);
+
+int main()
+{
+
+	idx = 0;
+	success = 0;
+	printf("미로탈출 게임\n\n");
+	si = 1;
+	sj = 1;
+	ei = 7;
+	ej = 7;
+	if (visit(si, sj) == 0)
+		printf("찾지 못함\n");
+	else
+		printf("모든 경로를 찾음\n");
+	return 0;
+
+}
+
+int visit(int i, int j)
+{
+
+	static int path = 1; // 찾은 경로 갯수
+	m[i][j] = 1;
+	path_i[idx] = i, path_j[idx] = j; // 경로 path를 저장
+	idx++;
+
+	// 만약 도착점에 도달했다면
+
+	if (i == ei && j == ej)
+	{
+
+		printf(" %d번째 찾은 경로\n\n", path++);
+		for (int k = 0; k < idx; k++) // 경로 출력
+			printf("(%d %d)", path_i[k], path_j[k]);
+		printf("\n\n");
+		success = 1; //경로 찾기 성공
+
+	}
+
+//***미로를 본격적으로 탐색하는 코드***
+
+	if (m[i] [j + 1] == 0) //오른쪽으로 탐색
+		visit(i, j + 1);
+	if (m[i + 1] [j] == 0) // 아래쪽으로 탐색
+		visit(i + 1, j);
+	if (m[i] [j - 1] == 0) //왼쪽으로 탐색
+		visit(i, j - 1);
+	if (m[i -1] [j] == 0) //위쪽으로 탐색
+		visit(i - 1, j);
+
+	idx--;
+	m[i][j] = 0;
+	return success;
+}
